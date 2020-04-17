@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'base.html' %} 
+
+{% block page_title %}{{user}}'s Profile{% endblock %}
+
+{% block page_heading %}Hi {{user}}{% endblock %}
+
+{% block content %}
+<div class="container">
+<p>Email: {{profile.email}}</p>
+<p>Do you want to reset your password? We can help you!</p>
+<p><a href="{% url 'password_reset' %}">Reset Password</a></p>
+
+</div>
+{% endblock%}
